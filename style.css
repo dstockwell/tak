@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+}
+
+#display {
+  background: #333333;
+  color: #CCCCCC;
+  white-space: pre;
+  font-family: "Droid Sans Mono";
+}

@@ -1,10 +1,21 @@
+body, html {
+  overflow: initial;
+}
 body {
   margin: 0px;
 }
-
 #display {
   background: #333333;
   color: #CCCCCC;
   white-space: pre;
+  word-wrap: normal;
   font-family: "Droid Sans Mono";
+}
+#input {
+  position: fixed;
+  top: 0;
+  opacity: 0;
+}
+#point {
+  background: red;
 }

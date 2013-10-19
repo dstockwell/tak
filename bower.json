@@ -6,5 +6,7 @@
     "curl": "*"
   },
   "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
   }
 }

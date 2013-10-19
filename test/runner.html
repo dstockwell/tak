@@ -1,0 +1,28 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../deps/mocha/mocha.css" />
+<body>
+<div id="mocha"></div>
+<script src="../deps/chai/chai.js"></script>
+<script src="../deps/mocha/mocha.js"></script>
+<script src="../deps/curl/src/curl.js"></script>
+<script>
+should = chai.should();
+mocha.setup('bdd');
+
+curl.config({
+  baseUrl: '../',
+  paths: {
+    chai: 'deps/chai/chai' 
+  }
+});
+
+var tests = [
+].map(function(test) { return 'test/' + test; });
+
+curl(tests).then(function() {
+  mocha.run();
+}, function(e) {
+  console.error(e);
+});
+</script>

@@ -1,0 +1,10 @@
+{
+  "name": "tak",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "curl": "*"
+  },
+  "devDependencies": {
+  }
+}

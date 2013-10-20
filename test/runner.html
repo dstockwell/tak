@@ -18,6 +18,7 @@ curl.config({
 });
 
 var tests = [
+  'buffer',
 ].map(function(test) { return 'test/' + test; });
 
 curl(tests).then(function() {
@@ -26,3 +27,4 @@ curl(tests).then(function() {
   console.error(e);
 });
 </script>
+

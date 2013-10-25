@@ -4,14 +4,14 @@ body, html {
 body {
   margin: 0px;
 }
-#display {
+.frame {
   background: #333333;
   color: #CCCCCC;
   white-space: pre;
   word-wrap: normal;
   font-family: "Droid Sans Mono", monospace;
 }
-#display div {
+.line {
   overflow: hidden;
 }
 .cursor-line {
@@ -22,7 +22,7 @@ body {
   top: -1000px;
   opacity: 0;
 }
-#cursor {
+.cursor {
   position: absolute;
   z-index: 1;
   top: 0px;

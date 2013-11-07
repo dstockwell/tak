@@ -26,7 +26,7 @@ define(['lib/input', 'lib/frame'], function(input, Frame) {
       text = key.text;
     } else {
       var keyString = key.toString();
-      if (keyString == 'Enter') {
+      if (keyString == 'Enter' || keyString == 'RightAlt') {
         text = '\n'
       } else if (keyString == 'Ctrl-R') {
         loadFile();
@@ -51,7 +51,7 @@ define(['lib/input', 'lib/frame'], function(input, Frame) {
         if (frame.cursor.col < frame.buffer.lines[frame.cursor.row].length) {
           frame.cursor.col++;
         }
-      } else if (keyString == 'Backspace') {
+      } else if (keyString == 'Backspace' || keyString == 'LeftAlt') {
         var prev = {row: frame.cursor.row, col: frame.cursor.col - 1};
         if (prev.col < 0) {
           if (prev.row == 0) {

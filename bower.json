@@ -1,6 +1,6 @@
 {
   "name": "tak",
-  "license": "MIT",
+  "license": "apache2",
   "private": true,
   "dependencies": {
     "curl": "*"

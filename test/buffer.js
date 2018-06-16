@@ -1,4 +1,6 @@
-define(['lib/buffer'], function(Buffer, chai) {
+import {Buffer} from '../lib/buffer.js';
+import {describe, it} from './test.js';
+
   describe('buffer', function() {
     it('should initialize', function() {
       var buffer = new Buffer('first\nsecond');
@@ -149,4 +151,3 @@ define(['lib/buffer'], function(Buffer, chai) {
       ]);
     });
   });
-});

@@ -1,30 +1,12 @@
 <!doctype html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="../deps/mocha/mocha.css" />
-<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.css" />
 <div id="mocha"></div>
-<script src="../deps/chai/chai.js"></script>
-<script src="../deps/mocha/mocha.js"></script>
-<script src="../deps/curl/src/curl.js"></script>
-<script>
+<script type=module>
+import {chai, mocha} from './test.js';
+import './buffer.js';
 should = chai.should();
 mocha.setup('bdd');
-
-curl.config({
-  baseUrl: '../',
-  paths: {
-    chai: 'deps/chai/chai' 
-  }
-});
-
-var tests = [
-  'buffer',
-].map(function(test) { return 'test/' + test; });
-
-curl(tests).then(function() {
-  mocha.run();
-}, function(e) {
-  console.error(e);
-});
+mocha.run();
 </script>
 
